@@ -1,0 +1,9 @@
+<nav mat-tab-nav-bar>
+  <a mat-tab-link *ngFor="let tab of adminTabs" [routerLink]="tab.path" routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive">
+    {{tab.label}}
+  </a>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>

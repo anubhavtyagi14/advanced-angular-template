@@ -1,1 +1,173 @@
+$success: #4caf50;
+$danger: #f44336;
+$info: #2196f3;
+$warning: #ff9800;
+$gray-60: #707070;
+$gray-text: #303030;
+$border-radius: 0px;
+$primary: #3f51b5;
+$accent: #e91e63;
+
 /* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-simple-snackbar {
+  font-size: 1.15em;
+  font-weight: 600;
+}
+.mat-simple-snackbar-action {
+  color: $primary;
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+.mat-form-field {
+  width: 100% !important;
+}
+.mat-paginator-page-size-select {
+  width: 56px !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-radius: 0 !important;
+}
+
+.text-error {
+  color: $danger !important;
+}
+.bg-success {
+  color: #fff;
+  background-color: $success;
+}
+.bg-info {
+  color: #fff;
+  background-color: $info;
+}
+.bg-warning {
+  color: #fff;
+  background-color: $warning;
+}
+.bg-error {
+  color: #fff;
+  background-color: $danger;
+}
+.text-success {
+  color: $success !important;
+}
+.text-primary {
+  color: $primary !important;
+}
+.text-warning {
+  color: $warning !important;
+}
+.text-light {
+}
+.text-medium {
+}
+.text-bold {
+}
+.text-extra-bold {
+}
+.text-center {
+  text-align: center !important;
+}
+.bold {
+  font-weight: 800 !important;
+}
+.pre {
+  white-space: pre;
+}
+
+.break-all {
+  word-break: break-all;
+}
+ol {
+  list-style-type: none;
+  counter-reset: listNumbering;
+  padding-left: 0;
+}
+ol > li {
+  font-size: 1em;
+  counter-increment: listNumbering;
+}
+ol > li:before {
+  content: counter(listNumbering, decimal-leading-zero) " ";
+  margin-right: 5px;
+}
+.mat-loading .mat-button-wrapper {
+  visibility: hidden;
+}
+
+.mat-loading .mat-progress-spinner {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+}
+.toastr {
+  border-radius: 0;
+  background-color: #fff;
+  color: #303030;
+  /* padding: 17px 15px 13px; */
+  border: 2px solid;
+  border-left-width: 48px;
+}
+.toastr .success {
+  border-color: #7eb338;
+}
+.toastr {
+  border-radius: 0 !important;
+  background-color: #fff;
+  color: $gray-text;
+  border: 2px solid;
+  border-left-width: 48px;
+  &::before {
+    position: absolute;
+    font-size: 25px;
+    margin-top: 0;
+    margin-left: -53px;
+    color: #fff;
+  }
+  &.success {
+    border-color: $success;
+  }
+  &.success::before {
+    content: "check";
+    font-family: "Material Icons";
+  }
+  &.info {
+    border-color: $info;
+  }
+  &.info::before {
+    content: "info";
+    font-family: "Material Icons";
+  }
+  &.warning {
+    border-color: $warning;
+  }
+  &.warning::before {
+    content: "warning";
+    font-family: "Material Icons";
+  }
+  &.error {
+    border-color: $danger;
+  }
+  &.error::before {
+    content: "error";
+    font-family: "Material Icons";
+  }
+  h4 {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}

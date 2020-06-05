@@ -1,0 +1,51 @@
+<!-- <div class="row" *ngIf="error$ | async as error">
+  <div class="col-md-12 empty-state critical">
+    <div class="notification-body text-center">
+      <h1><i class="icon icon-badge-warning sizex3"></i></h1>
+      <h1 *ngIf="error?.code">Error {{ error?.code }}</h1>
+      <p *ngIf="error?.message">{{ error?.message }}</p>
+      <p>
+        We didn't expect that someone will come here. The Support team is notified.
+        Go to <a href="#">Home Page</a> or Click "Contact Us" link above.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="row" *ngIf="!errorParams && !data">
+    <div class="col-md-12 empty-state critical">
+      <div class="notification-body text-center">
+        <h1><i class="icon icon-badge-warning sizex3"></i></h1>
+        <h1>Unknown error</h1>
+        <p>
+          We didn't expect that someone will come here. The Support team is notified.
+          Go to <a href="#">Home Page</a> or Click "Contact Us" link above.
+        </p>
+      </div>
+    </div>
+  </div>
+<div class="container container-fluid" id="page-container" *ngIf="data?.error">
+  <div class="row">
+    <div class="col col-md-6">
+
+      <h2 class="num-callout">{{data?.error}}!</h2>
+      <h1 class="text-left" *ngIf="data?.error === 404">Page Not Found</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-md-12">
+      <p>
+        We didn't expect that someone will come here.
+        Go to <a href="#">Home Page</a> or If you feel something is
+        missing that should be here, click "Contact Us" link above.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="data?.error === 404">
+    <div class="col col-md-12">
+      <img src="/assets/img/404PageNotFound.jpg" style="width:100%;">
+    </div>
+  </div>
+
+</div> -->

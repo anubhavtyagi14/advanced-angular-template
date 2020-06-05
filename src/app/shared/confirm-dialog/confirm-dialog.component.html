@@ -1,0 +1,10 @@
+<div class="header">
+  <h1 mat-dialog-title>{{ data.title }}</h1>
+</div>
+<div mat-dialog-content>
+  <p class="dialog-message">{{ data.message }}</p>
+</div>
+<div mat-dialog-actions align="end">
+  <button class="btn btn-secondary" (click)="cancel()">{{ data.cancelText }}</button>
+  <button class="btn btn-primary" (click)="confirm()" cdkFocusInitial>{{ data.confirmText }}</button>
+</div>
