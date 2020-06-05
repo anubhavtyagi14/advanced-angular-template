@@ -7,9 +7,32 @@ $gray-text: #303030;
 $border-radius: 0px;
 $primary: #3f51b5;
 $accent: #e91e63;
-
+// @import "@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
-@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/theming";
+@include mat-core();
+
+// Define the default theme (same as the example above).
+$app-primary: mat-palette($mat-indigo);
+$app-accent: mat-palette($mat-pink);
+$app-theme: mat-light-theme($app-primary, $app-accent);
+// Include the default theme styles.
+@include angular-material-theme($app-theme);
+
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-indigo);
+$dark-accent: mat-palette($mat-pink);
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent);
+.mat-toolbar {
+  background-color: #f0f0f0;
+}
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+  .mat-toolbar {
+    background-color: #212121;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -169,5 +192,51 @@ ol > li:before {
     font-size: 1em;
     text-transform: uppercase;
     margin-bottom: 0;
+  }
+}
+.vertical-radio-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+}
+
+.vertical-radio-button {
+  margin: 8px;
+  .mat-radio-container {
+    margin-right: 8px;
+  }
+}
+
+.mat-icon.theme-icon {
+  margin-right: 0;
+  margin-left: 8px;
+  float: right;
+  &.light {
+    svg {
+      // vertical-align: middle;
+      .theme-icon-background {
+        fill: #f0f0f0;
+      }
+      .theme-icon-button {
+        fill: $accent;
+      }
+      .theme-icon-toolbar {
+        fill: $primary;
+      }
+    }
+  }
+  &.dark {
+    svg {
+      // vertical-align: middle;
+      .theme-icon-background {
+        fill: #212121;
+      }
+      .theme-icon-button {
+        fill: $accent;
+      }
+      .theme-icon-toolbar {
+        fill: $primary;
+      }
+    }
   }
 }

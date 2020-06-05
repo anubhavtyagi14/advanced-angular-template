@@ -13,6 +13,7 @@ import { AppConstant } from '@app/shared/helpers';
 })
 export class HeaderComponent implements OnInit {
   isLoggenIn$ = this.authFacade.isLoggedIn$;
+  currentTheme$ = this.appShellFacade.currentTheme$;
   user$ = this.authFacade.user$;
   showExample = true;
   appTitle = AppConstant.applicationName;

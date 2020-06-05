@@ -6,6 +6,16 @@ export const getSidebarOpened = createSelector(
   getAppShell,
   (state: AppShellState) => state.sidebarOpened,
 );
+export const getTheme = createSelector(
+  getAppShell,
+  (state: AppShellState) => state.theme,
+);
+export const getIsDarkTheme = createSelector(
+  getAppShell,
+  (state: AppShellState) => state.theme === 'dark',
+);
 export const appShellQuery = {
-  getSidebarOpened
+  getSidebarOpened,
+  getTheme,
+  getIsDarkTheme
 };

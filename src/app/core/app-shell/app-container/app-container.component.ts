@@ -10,6 +10,7 @@ import { AppShellFacade } from '../+store/app-shell.facade';
 })
 export class AppContainerComponent implements OnInit {
   toggleSideBar$: Observable<boolean> = this.appFacade.toggleSideBar$;
+  isDarkTheme$: Observable<boolean> = this.appFacade.isDarkTheme$;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),

@@ -7,6 +7,7 @@ const reducer = createReducer(
   on(AppShellActions.toggleSidebar, state => ({ ...state, sidebarOpened: !state.sidebarOpened })),
   on(AppShellActions.openSidebar, state => ({ ...state, sidebarOpened: true })),
   on(AppShellActions.closeSidebar, state => ({ ...state, sidebarOpened: false })),
+  on(AppShellActions.changeTheme, (state, action) => ({ ...state, theme: action.theme })),
 );
 
 export function appShellReducer(state: AppShellState | undefined, action: Action) {
