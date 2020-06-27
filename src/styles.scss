@@ -16,20 +16,28 @@ $accent: #e91e63;
 $app-primary: mat-palette($mat-indigo);
 $app-accent: mat-palette($mat-pink);
 $app-theme: mat-light-theme($app-primary, $app-accent);
-// Include the default theme styles.
-@include angular-material-theme($app-theme);
 
 // Define an alternate dark theme.
 $dark-primary: mat-palette($mat-indigo);
 $dark-accent: mat-palette($mat-pink);
 $dark-theme: mat-dark-theme($dark-primary, $dark-accent);
-.mat-toolbar {
-  background-color: #f0f0f0;
+
+.light-theme {
+  @include angular-material-theme($app-theme);
+  .mat-toolbar {
+    background-color: #f0f0f0;
+  }
+  .theme-bulb {
+    color: $gray-text;
+  }
 }
 .dark-theme {
   @include angular-material-theme($dark-theme);
   .mat-toolbar {
     background-color: #212121;
+  }
+  .theme-bulb {
+    color: $warning;
   }
 }
 

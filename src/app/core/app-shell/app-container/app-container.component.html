@@ -1,4 +1,4 @@
-<div [class.dark-theme]="isDarkTheme$ | async">
+<div [ngClass]="(isDarkTheme$ | async) ? 'dark-theme':'light-theme'">
   <app-header></app-header>
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" class="sidenav"

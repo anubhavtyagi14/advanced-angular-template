@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MatRadioChange } from '@angular/material/radio';
 import { AppShellFacade } from '../+store/app-shell.facade';
 export type ThemeType = 'light' | 'dark';
 @Component({
@@ -14,7 +13,10 @@ export class ThemePickerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onThemeChange(e: MatRadioChange) {
-    this.appShellFacade.changeTheme(e.value);
+  onThemeChange() {
+    this.theme === 'light' ? this.appShellFacade.changeTheme('dark')
+      : this.appShellFacade.changeTheme('light');
+
+
   }
 }

@@ -11,10 +11,8 @@ import { AppShellStoreModule } from '@app/core/app-shell/+store';
 import { AppShellFacade } from './+store/app-shell.facade';
 import { ThemePickerComponent } from './theme-picker/theme-picker.component';
 import { AngularMaterialLayoutModule } from './angular-material-layout.module';
-import { ThemeIconComponent } from './theme-icon/theme-icon.component';
 import { FormsModule } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
-import { filter } from 'rxjs/operators';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -22,7 +20,6 @@ import { filter } from 'rxjs/operators';
     FooterComponent,
     AppContainerComponent,
     ThemePickerComponent,
-    ThemeIconComponent
   ],
   imports: [
     CommonModule,
@@ -47,6 +44,21 @@ export class AppShellModule {
         this.appshellFacade.closeSideBar();
       }
     });
+    const darkModeOn =
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // If dark mode is enabled then directly switch to the dark-theme
+    if (darkModeOn) {
+      this.appshellFacade.changeTheme('dark');
+    }
+
+    // Watch for changes of the preference
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      const turnOn = e.matches;
+      this.appshellFacade.changeTheme(turnOn ? 'dark' : 'light');
+    });
+
     this.isDarkTheme$.subscribe(val => {
       if (val) {
         overlayContainer.getContainerElement().classList.add('dark-theme');

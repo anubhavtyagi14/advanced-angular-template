@@ -1,20 +1,5 @@
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Select a theme" matTooltip="Select a theme">
+<button mat-icon-button aria-label="Change theme" class="theme-bulb" matTooltip="Select a theme"
+  (click)="onThemeChange()" style="margin: 0 8px;">
   <mat-icon role="img" aria-hidden="true">
-    palette</mat-icon>
+    emoji_objects</mat-icon>
 </button>
-<mat-menu #menu="matMenu" xPosition="before">
-  <mat-radio-group class="vertical-radio-group" [(ngModel)]="theme" (change)="onThemeChange($event)">
-    <mat-radio-button class="vertical-radio-button" [value]="'light'">
-      Light
-      <mat-icon class="theme-icon light">
-        <app-theme-icon></app-theme-icon>
-      </mat-icon>
-    </mat-radio-button>
-    <mat-radio-button class="vertical-radio-button" [value]="'dark'">
-      Dark
-      <mat-icon class="theme-icon dark">
-        <app-theme-icon></app-theme-icon>
-      </mat-icon>
-    </mat-radio-button>
-  </mat-radio-group>
-</mat-menu>

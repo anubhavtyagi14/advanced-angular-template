@@ -1,6 +1,20 @@
 # Advanced-Angular-Template
+This is a real world Angular template on Angular Version 10.0.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+## Features
+
+* NgRx
+* OAuth using oidc-client
+* Custom Http Helper
+* Error Handling Module
+* Router State Module using NgRx
+* Angular Material
+* Formly
+* Two Themes :- Light and Dark
+* Generic Resusable components or service like Toastr, Confirmation Dialog etc.
+
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 ## Development server
 
