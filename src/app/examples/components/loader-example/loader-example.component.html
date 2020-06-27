@@ -28,10 +28,16 @@
           </div>
         </li>
         <li>
-        Show Toastr
+          Show Toastr
           <div class="example-button-row">
-            <button mat-flat-button color="primary" (click)="showToastr()" type="button" name="button">Start
-             Show Toastr</button>
+            <button mat-flat-button color="primary" (click)="showToastr('info')" type="button" name="button">Start
+              Show Info Toastr</button>
+            <button mat-flat-button color="primary" (click)="showToastr('success')" type="button" name="button">Start
+              Show Success Toastr</button>
+            <button mat-flat-button color="primary" (click)="showToastr('warning')" type="button" name="button">Start
+              Show Warning Toastr</button>
+            <button mat-flat-button color="primary" (click)="showToastr('error')" type="button" name="button">Start
+              Show Error Toastr</button>
           </div>
         </li>
       </ul>

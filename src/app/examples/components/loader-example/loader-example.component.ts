@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { interval } from 'rxjs';
 import { map, take, delay, withLatestFrom, finalize, tap } from 'rxjs/operators';
 import { LoaderComponent } from '@app/shared/loader/loader.component';
-import { ToastrService } from '@app/shared/toastr/toastr.service';
+import { ToastrService, ToastrType } from '@app/shared/toastr';
 
 @Component({
   selector: 'app-loader-example',
@@ -74,10 +74,27 @@ export class LoaderExampleComponent implements OnDestroy, OnInit {
     // We're sure that subscription has been made, we can start loading bar service
     this.loader.start();
   }
-  showToastr() {
-    this.toastr.info('This is information !!!');
-    this.toastr.success('This is success !!!');
-    this.toastr.warning('This is warning !!!');
-    this.toastr.error('This is error !!!');
+  showToastr(type: ToastrType) {
+    switch (type) {
+      case 'error':
+        this.toastr.error('This is error !!!');
+        break;
+      case 'info':
+        this.toastr.info('This is error !!!');
+        break;
+      case 'success':
+        this.toastr.success('This is success !!!');
+        break;
+      case 'warning':
+        this.toastr.warning('This is warning !!!');
+        break;
+      default:
+        this.toastr.info('This is information !!!');
+        break;
+    }
+
+
+
+
   }
 }

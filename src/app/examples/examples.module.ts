@@ -11,13 +11,12 @@ import { FormlyExampleComponent } from './components/formly-example/formly-examp
 import { FormlyModule } from '@ngx-formly/core';
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,
     LoadingButtonsComponent,
     LoaderExampleComponent,
-    FormlyExampleComponent
+    FormlyExampleComponent,
   ],
   imports: [
     CommonModule,
