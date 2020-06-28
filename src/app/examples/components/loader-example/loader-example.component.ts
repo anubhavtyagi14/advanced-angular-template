@@ -2,8 +2,8 @@ import { Component, ChangeDetectionStrategy, OnDestroy, OnInit, ViewChild } from
 import { HttpClient } from '@angular/common/http';
 import { interval } from 'rxjs';
 import { map, take, delay, withLatestFrom, finalize, tap } from 'rxjs/operators';
-import { LoaderComponent } from '@app/shared/loader/loader.component';
-import { ToastrService, ToastrType } from '@app/shared/toastr';
+import { LoaderComponent } from '@app/core/loader';
+import { ToastrService, ToastrType } from '@app/core/toastr';
 
 @Component({
   selector: 'app-loader-example',

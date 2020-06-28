@@ -6,7 +6,8 @@ import { HttpHelperModule } from '@app/core/http-helper';
 import { AuthModule } from '@app/core/auth';
 import { NgrxErrorModule } from '@app/core/ngrx-error';
 import { NgrxRouterModule } from '@app/core/ngrx-router';
-
+import { ToastrModule } from '@app/core/toastr';
+import { LoaderModule } from '@app/core/loader';
 @NgModule({
   declarations: [],
   imports: [
@@ -17,7 +18,9 @@ import { NgrxRouterModule } from '@app/core/ngrx-router';
     HttpHelperModule,
     AuthModule,
     NgrxErrorModule,
-    NgrxRouterModule
+    NgrxRouterModule,
+    ToastrModule,
+    LoaderModule
   ]
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {

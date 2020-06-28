@@ -1,15 +1,13 @@
 import { Injectable, ErrorHandler } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { MatDialog } from '@angular/material/dialog';
 import { throwError } from 'rxjs';
-import { ToastrService } from '@app/shared/toastr/toastr.service';
+import { ToastrService } from '@app/core/toastr';
 @Injectable()
 export class ErrorHandlerService implements ErrorHandler {
 
   private offlineErrorMessage = 'Oh! No Internet found. Please check your connection and try again.';
   constructor(
     private toastr: ToastrService,
-    public dialog: MatDialog
   ) { }
   handleError(error: Error | HttpErrorResponse) {
     let errorMessage: string;

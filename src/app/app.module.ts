@@ -7,10 +7,7 @@ import { AppRoutingModule } from '@app/routing';
 import { environment } from '@env/environment';
 import { AppComponent, WelcomeComponent } from '@app/components';
 import { RootStoreModule } from '@app/+root-store';
-import { SharedModule } from '@app/shared';
 import { FormlyModule } from '@ngx-formly/core';
-import { ReactiveFormsModule } from '@angular/forms';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,8 +18,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule,
-    ReactiveFormsModule,
     FormlyModule.forRoot(),
     CoreModule,
     !environment.production ? StoreDevtoolsModule.instrument({

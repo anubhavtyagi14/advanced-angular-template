@@ -10,6 +10,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgrxErrorInterceptor } from './ngrx-error-interceptor.service';
 import { NgrxErrorFacade } from './+store/ngrx-error.facade';
 import { ErrorHandlerService } from './ngrx-error.handler';
+import { ToastrModule } from '../toastr';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ErrorHandlerService } from './ngrx-error.handler';
   ],
   imports: [
     CommonModule,
+    ToastrModule,
     StoreModule.forFeature(ngrxErrorFeatureKey, ngrxErrorReducer, {
       initialState: ngrxErrorInitialState,
     }),

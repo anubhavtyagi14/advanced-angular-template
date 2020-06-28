@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 // import { ToastrComponent } fro./toastr.component.ts.excludeent';
-import { CustomMaterialModule } from '../angular-material';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ToastrService } from './toastr.service';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 
 @NgModule({
-  imports: [],
-  exports: [CustomMaterialModule],
+  imports: [MatSnackBarModule],
+  exports: [],
   declarations: [],
   providers: [
     ToastrService,

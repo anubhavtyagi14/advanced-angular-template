@@ -13,6 +13,7 @@ import { ThemePickerComponent } from './theme-picker/theme-picker.component';
 import { AngularMaterialLayoutModule } from './angular-material-layout.module';
 import { FormsModule } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -27,7 +28,8 @@ import { OverlayContainer } from '@angular/cdk/overlay';
     RouterModule,
     LayoutModule,
     AngularMaterialLayoutModule,
-    AppShellStoreModule
+    AppShellStoreModule,
+    FlexLayoutModule
   ],
 
   exports: [AppContainerComponent]

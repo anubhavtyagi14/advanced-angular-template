@@ -6,7 +6,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
   imports: [],
   exports: [
@@ -17,7 +16,6 @@ import { MatRadioModule } from '@angular/material/radio';
     MatListModule,
     MatTooltipModule,
     MatMenuModule,
-    MatRadioModule
   ]
 })
 export class AngularMaterialLayoutModule { }

@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoaderExampleComponent } from './components/loader-example/loader-example.component';
 import { FormlyExampleComponent } from './components/formly-example/formly-example.component';
 import { FormlyModule } from '@ngx-formly/core';
+import { LoaderModule } from '@app/core/loader';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FormlyModule } from '@ngx-formly/core';
     CommonModule,
     ReactiveFormsModule,
     SharedModule,
+    LoaderModule,
     FormsModule,
     FormlyModule.forChild(),
     ExamplesRoutingModule

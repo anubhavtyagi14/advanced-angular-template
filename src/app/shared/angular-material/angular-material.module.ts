@@ -16,7 +16,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule, MatFormFieldDefaultOptions, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
 };
@@ -39,7 +39,7 @@ const appearance: MatFormFieldDefaultOptions = {
     MatRadioModule,
     MatSelectModule,
     MatNativeDateModule,
-    MatSnackBarModule
+
   ],
   providers: [
     {
